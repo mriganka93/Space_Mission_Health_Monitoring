@@ -6,17 +6,6 @@ Challenge: Create Health Monitoring Software for Astronauts on Space Missions.
 
 The application helps astronauts and mission support teams monitor health and wellness during long-duration Mars missions. It supports two mission environments: Interplanetary Space Flight and Mars Surface, with separate health records and mission-aware dashboards.
 
-✨ Features
-🚀 Mission Selection: Dedicated environments for Space Flight and Mars Surface.
-🩺 Health Monitoring: Record blood pressure, heart rate, SpO2, body temperature, weight, and health notes.
-⚠️ Automatic Health Alerts: Identify abnormal heart rate, oxygen saturation, and blood pressure averages using the last 2 days of readings.
-😴 Sleep Tracking: Monitor sleep using a 7-day average, with warnings below 6 hours.
-📊 Health Analytics: Visualise health trends and a 30-day blood pressure chart.
-🧪 Laboratory Data Upload: Upload blood and urine test results.
-🔬 Lab Result Analysis: Colour-coded indicators for glucose, calcium, and creatinine, with plain-language guidance.
-💾 Data Management: Store health records using SQLite with separate mission records.
-🖥️ Application Screenshots
-1. Main Dashboard
 
 <p align="center">
 <img src="docs/screenshots/dashboard.png" alt="SpaceHealth Dashboard" width="850">
