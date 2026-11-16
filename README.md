@@ -25,7 +25,7 @@ The application helps astronauts and mission support teams monitor health and we
 2. Manual Health Data Entry
 
 <p align="center">
-<img src="docs/screenshots/manual_health_data_entry%27.png" alt="Manual Health Data Entry" width="850">
+<img src="docs/screenshots/manual_health_data_entry.png" alt="Manual Health Data Entry" width="850">
 </p>
 
 3. Health Data CSV Upload
