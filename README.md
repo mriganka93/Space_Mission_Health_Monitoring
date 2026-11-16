@@ -1,74 +1,85 @@
-🚀 SpaceHealth: Astronaut Health Monitoring System
+🚀 SpaceHealth | Astronaut Health Monitoring System
 
-Built for the NASA Space Apps Challenge 2026, challenge: Create Health Monitoring Software for Astronauts on Space Missions.
+SpaceHealth is a web-based astronaut health monitoring platform developed for the NASA Space Apps Challenge 2026.
 
-SpaceHealth is an astronaut health monitoring platform designed to help astronauts and mission support teams track, monitor, and analyse health conditions throughout a Mars mission. It supports two mission environments: Space Flight and Mars Surface, providing separate health records and environment-specific dashboards.
+Challenge: Create Health Monitoring Software for Astronauts on Space Missions.
+
+The application helps astronauts and mission support teams monitor health and wellness during long-duration Mars missions. It supports two mission environments: Interplanetary Space Flight and Mars Surface, with separate health records and mission-aware dashboards.
 
 ✨ Features
-Mission-aware Dashboard: Separate dashboards and health records for Space Flight and Mars Surface missions.
-Manual Health Monitoring: Record blood pressure, heart rate, SpO2, body temperature, weight, and personal health notes.
-Automatic Health Alerts: Identifies abnormal heart rate, oxygen saturation, and blood pressure averages based on the last 2 days of readings.
-Sleep Monitoring: Tracks sleep patterns using a 7-day average, with visual alerts for insufficient sleep.
-Health Analytics & Reports: Provides health trends and a 30-day blood pressure chart with out-of-range readings highlighted.
-Laboratory Data Upload: Supports blood and urine test results with colour-coded indicators for glucose, calcium, and creatinine, along with plain-language guidance.
+🚀 Mission Selection: Dedicated environments for Space Flight and Mars Surface.
+🩺 Health Monitoring: Record blood pressure, heart rate, SpO2, body temperature, weight, and health notes.
+⚠️ Automatic Health Alerts: Identify abnormal heart rate, oxygen saturation, and blood pressure averages using the last 2 days of readings.
+😴 Sleep Tracking: Monitor sleep using a 7-day average, with warnings below 6 hours.
+📊 Health Analytics: Visualise health trends and a 30-day blood pressure chart.
+🧪 Laboratory Data Upload: Upload blood and urine test results.
+🔬 Lab Result Analysis: Colour-coded indicators for glucose, calcium, and creatinine, with plain-language guidance.
+💾 Data Management: Store health records using SQLite with separate mission records.
 🖥️ Application Screenshots
+1. Main Dashboard
 
-The following screenshots demonstrate the main features and user interface of SpaceHealth.
+<p align="center">
+<img src="docs/screenshots/dashboard.png" alt="SpaceHealth Dashboard" width="850">
+</p>
 
-1. Dashboard
+2. Manual Health Data Entry
 
-!SpaceHealth Dashboard
+<p align="center">
+<img src="docs/screenshots/manual_heath_data_entry%27.png" alt="Manual Health Data Entry" width="850">
+</p>
 
-2. Health Monitoring
+3. Health Data CSV Upload
 
-!Health Monitoring
+<p align="center">
+<img src="docs/screenshots/Health_data_CSV_Upload.png" alt="Health Data CSV Upload" width="850">
+</p>
 
-3. Sleep Monitoring
+4. Reports and Health Parameters
 
-!Sleep Monitoring
+<p align="center">
+<img src="docs/screenshots/Reports_Details_of_Heath_Parameters.png" alt="Health Reports" width="850">
+</p>
 
-4. Analytics and Reports
-
-!Analytics and Reports
-
-5. Laboratory Results
-
-!Laboratory Results
-
-6. Mission Environment Selection
-
-!Mission Environment
-
-🛠️ Tech Stack
-Component	Technology
-Frontend	React, Vite, Lucide Icons
-Backend	Python, FastAPI, SQLAlchemy
-Database	SQLite
-📂 Project Structure
+🛠️ Technology Stack
+Technology	Purpose
+React	Frontend development
+Vite	Frontend development server
+Lucide Icons	UI icons
+Python	Backend development
+FastAPI	REST API
+SQLAlchemy	Database ORM
+SQLite	Health-data storage
+📁 Project Structure
 text
 spacehealth/
+│
 ├── backend/
 │   ├── app/
 │   ├── uploads/
-│   ├── venv/
 │   ├── health_records.db
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env
+│
 ├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
 ├── docs/
 │   └── screenshots/
 │       ├── dashboard.png
-│       ├── health-monitoring.png
-│       ├── sleep-monitoring.png
-│       ├── reports.png
-│       ├── lab-results.png
-│       └── mission-selection.png
-├── README.md
-└── .gitignore
+│       ├── manual_heath_data_entry'.png
+│       ├── Health_data_CSV_Upload.png
+│       └── Reports_Details_of_Heath_Parameters.png
+│
+├── .gitignore
+└── README.md
 
-⚙️ Running Locally
+🚀 Installation and Setup
 Prerequisites
 Python 3
 Node.js and npm
+Git
 1. Clone the Repository
 bash
 git clone YOUR_GITHUB_REPOSITORY_URL
@@ -77,12 +88,16 @@ cd spacehealth
 2. Start the Backend
 bash
 cd backend
+
+python3 -m venv venv
 source venv/bin/activate
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 
 
-Backend API: http://127.0.0.1:8000
+Backend: http://127.0.0.1:8000
 
 API Documentation: http://127.0.0.1:8000/docs
 
@@ -92,16 +107,36 @@ Open a new terminal:
 
 bash
 cd frontend
+
 npm install
 npm run dev
 
 
-Open the local address provided by Vite (usually http://localhost:5173).
+Open the Vite development URL, usually:
 
-🌍 Project Goal
+http://localhost:5173
 
-SpaceHealth aims to support astronaut health monitoring during long-duration space missions by making health information accessible, organised, and easier to understand for both astronauts and mission support teams.
+🗄️ Database
 
+SpaceHealth uses SQLite for local data storage and SQLAlchemy for database operations.
+
+Health records include vital signs, sleep information, notes, laboratory results, and mission-specific information.
+
+🔒 Privacy
+Do not commit .env files containing secrets.
+Do not commit the Python virtual environment.
+Avoid publishing personal health records or sensitive uploaded files.
+Protect database backups and uploaded health information.
 ⚠️ Disclaimer
 
-The normal health ranges, automated alerts, and health recommendations provided by this application are intended for demonstration purposes only and do not constitute medical advice. Actual medical thresholds and interventions for space missions must be determined by qualified flight surgeons and healthcare professionals.
+SpaceHealth is a demonstration health-monitoring application and is not a certified medical device.
+
+Health ranges, alerts, and recommendations are for demonstration purposes only and do not constitute medical advice. Actual medical thresholds and interventions must be determined by qualified flight surgeons and healthcare professionals.
+
+👨‍💻 Author
+
+Mriganka Saikia
+
+Developed for the NASA Space Apps Challenge 2026.
+
+⭐ If you find this project interesting, consider giving the repository a star!
